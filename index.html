@@ -6,51 +6,207 @@
    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <title>Montly Salary/Expenditure</title>
+    
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<title>Montly Salary/Expenditure</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     
 </head>
 <body>
+
+
+
+<div id='pop'>
+    <label for="salary">Please enter your salary</label>
+    <input type="number"name="sal" placeholder="Enter salary here"/>
+    <br>
+    <br>
+    <button></button>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        Launch demo modal
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <div class="container"> 
 
     <h1 id="heading"> Expense Report </h1>
 
-   <div class="jumbotron">
+   <!--<div class="jumbotron">-->
 
 <form>
-
-<div class="form-group"> 
-<label for="salary">Enter your salary</label>
-<input type="number" class="form-control" id="sal" placeholder="Enter your salary in number">
-</div>
-<br>
-
-<div class="form-group"> 
-        <label for="expence">Expenditure:</label>
-        <input type="number" class="form-control" id="exp" placeholder="Monthly expenses ">
+ <div class="form-group"> 
+    <div class="col-sm-12">
+     <label for="salary">Enter your salary:</label>
+     <input type="number" class="form-control" id="sal" placeholder="Enter your salary in number"></a>
+    </div>
+   <br>
+ </div>
+   <br>
+   <br>
 </form>
+
+<form id="myform">
+<div id="myform" class="form-group" >
+        <div class="col-sm-6"> 
+         <label for="expence">Expence name:</label>
+         <input type="text" class="form-control" id="exp" placeholder="Add One-By-One ">
+        </div>
+
+        <div class="col-sm-5"> 
+                <label for="Amount">Amount Spend:</label>
+                <input type="number" class="form-control" id="amount" placeholder="Add a Amount (only in number)">
+        </div>
+        
+        <div class="col-sm-1">
+                <label for="Add more">ADDnew:</label> <br>
+                <!--<button onclick="Adding(event)"class="addbutton" id="add">+</button>-->
+                <input type ="button" onclick="Adding(event)" id="submit" value="Row Added">
+        </div>
+
+
+        </div>
+
+                
+
+<!-- </form> -->
+
+<br> 
+
+
+</form>
+</div>
+</div>
+
+<br>
 <br>
 <br>
 
+<div class="container">
+    
+        <table class="table table-striped" id="table">
+            
+             <tr>
+                 <th>Expence Name</th>
+                 <th>Amount</th>
+             </tr>
+        
+        </table>
+    </div>
+</div>
 
-<a onclick="calc()">Show Remaining Balance</a>
+</div>
+
+
+
+
+
+
+
+<br>
+<br><br>
+</div>
+
+</div>
+
+
+
+
+<!--<div class="card-action">
+<h5 id="list-of-expenditure">list of Expenditure</h5>
+<div class="input-field col s12"></div>
+<input type ="text" name="list" id="list"/>
+<label for="list"> lists</label>
+</div>
+
+</div>
+-->
+
+
+<div class="container">
+    <a onclick="sumofexpen()">Sum Of All Expenditure:</a>
+   <input type="text" id="sum"/>
+    <!-- <span id="val"></span>-->
+</div>
+
+
+
+
+
+
+
+
+<br>
+<div class="container">
+<a onclick="calc()">Show Remaining Balance:</a>
 
 <input type="text" id="result"/>
 
 
-
-
-
-
-   </div>
-
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script
   src="http://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script> 
     <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="app.js"></script>
